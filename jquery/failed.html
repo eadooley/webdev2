@@ -4,45 +4,53 @@
     
     <head>
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
-            
         </script>
-        <script>
-          $(document).ready(function() {
+                <script>
+            $(document).ready(function() {
+                $("button").click(function() {
+                    //console.log("clicked");
                     $.ajax({
-                        url:"https://data.cityofchicago.org/resource/cm53-g3up.json",
+                        url: "https://data.cityofchicago.org/resource/cwig-ma7x.json",
                         success: function(result) {
-                            console.log(result); 
-                            var Output = "";
-                            
-                            $.each(results, function(index, value) {
-                             S("#results").append(value.location_address + " " + value.park_name);
-                             
-                                
-                            });
-                
-                
-                
-                        }
-                    });
+                            console.log(result);
+                            for (var i=0; i<result.length; i++){
+                                if (result[i]['results'] !== undefined) {
+                                    if (result[i]['results'] == "Fail") {
+                                        var name = result[i]['aka_name'];
+                                        var data = "<p class = 'well'>" + name;
+                                        $("#div1").append(data);
+                                    }
+                                }
+                            }
+
+                   }
+                    })
                 });
-      
+            });
         </script>
-    
-      
+       
+        
+        <style>
+            .output{
+                color: red;
+            }
+            body{
+                background-color:green;
+            }
+        </style>
     </head>
 
     <body>
 
         <div id="div1">
-            <h2>Failed Health Inspections</h2>
+            <h2>jQuery and APIs</h2>
         </div>
 
-        <button>Events</button>
+        <button>Click to see all the resteraunts with failed health inspections</button>
         
-        <div id="results">
+        <div id="div1">
             
         </div>
     </body>
 
     </html>
-
