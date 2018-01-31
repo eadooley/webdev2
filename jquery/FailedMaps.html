@@ -39,6 +39,7 @@
       $(document).ready(function() {
         $.ajax({
             url:"https://data.cityofchicago.org/resource/cwig-ma7x.json",
+            //url that the api gives you//
             success: function(result) {
               for (var i=0; i<result.length; i++){
                 if (result[i]['location'] !== undefined){

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
+Your browser does not support the HTML5 canvas tag.</canvas>
+
+
+
+<script>
+
+
+
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "60px Arial";
+var grd = ctx.createLinearGradient(0,0,600,0);
+grd.addColorStop(0,"blue");
+grd.addColorStop(1,"red");
+ctx.fillStyle = grd;
+ctx.fillRect(0,0,600,600);
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(0,500);
+ctx.lineTo(600,500);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,350);
+ctx.lineTo(300,450);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,450);
+ctx.lineTo(325,500);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,450);
+ctx.lineTo(275,500);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,375);
+ctx.lineTo(265,350);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(300,375);
+ctx.lineTo(335,350);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(300,310,40,0,2*Math.PI);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.font = "30px Arial";
+ctx.fillText("Im a cool stick man!",10,50);
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(75,75);
+ctx.lineTo(150,75);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(75,75);
+ctx.lineTo(75,175);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(75,125);
+ctx.lineTo(135,125);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(75,175);
+ctx.lineTo(150,175);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(200,75);
+ctx.lineTo(200,175);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(200,75);
+ctx.lineTo(275,125);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(200,175);
+ctx.lineTo(275,125);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(280,305,5,0,2*Math.PI);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.beginPath();
+ctx.arc(320,305,5,0,2*Math.PI);
+ctx.stroke();
+var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+ctx.moveTo(320,325);
+ctx.lineTo(300,330);
+ctx.stroke();
+</script>
+
+</body>
+</html>
+

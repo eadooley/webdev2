@@ -11,6 +11,7 @@
                     //console.log("clicked");
                     $.ajax({
                         url: "https://data.cityofchicago.org/resource/cwig-ma7x.json",
+                        //where you get the api from chicago data portal//
                         success: function(result) {
                             console.log(result);
                             for (var i=0; i<result.length; i++){
