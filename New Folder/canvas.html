@@ -2,15 +2,8 @@
 <html>
 <body>
 
-<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;">
-Your browser does not support the HTML5 canvas tag.</canvas>
-
-
-
+<canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;"></canvas>
 <script>
-
-
-
 var c = document.getElementById("myCanvas");
 var ctx = c.getContext("2d");
 ctx.font = "60px Arial";
@@ -108,6 +101,22 @@ var ctx = c.getContext("2d");
 ctx.moveTo(320,325);
 ctx.lineTo(300,330);
 ctx.stroke();
+ function drawCircle() {
+        mainContext.clearRect(0, 0, canvasWidth, canvasHeight);
+        mainContext.fillStyle = "#ff9900";
+        mainContext.fillRect(0, 0, canvasWidth, canvasHeight);
+        
+        mainContext.beginPath();
+        var radius = 25 + 150 * Math.abs(Math.cos(angle));
+        mainContext.arc(225, 225, radius, 0, Math.PI * 2);
+        mainContext.closePath();
+        mainContext.fillStyle = "#3377ff";
+        mainContext.fill();
+        
+        angle += Math.PI / 64;
+        requestAnimationFrame(drawCircle);
+    }
+    drawCircle();
 </script>
 
 </body>
