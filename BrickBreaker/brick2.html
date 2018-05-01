@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <canvas id="myCanvas" width="600" height="600" style="border:1px solid #d3d3d3;"></canvas>
+<script>
+var canvas = document. getElementById(“myCanvas”);
+var ctx = canvas.getContext(“2d”);
+
+    
+ctx.beginPath();
+ctx.arc(240, 160, 20, 0, Math.PI*2, false);
+ctx.fillStyle = “red”;
+ctx.fill();
+ctx.closePath();
+    
+function draw(){
+
+}
+setInterval(draw, 10);
+   
+    ctx.beginPath();
+ctx.arc(50, 50, 10, 0, Math.PI*2);
+ctx.fillStyle = <000080>;
+ctx.fill();
+ctx.closePath();
+
+
+var x = canvas.width/2;
+var y = canvas.height - 30;
+x += dx;
+y += dy;
+
+ctx.clearRect(0, 0, canvas.width, canvas.height);
+
+</script>
+    
+  
+</html>

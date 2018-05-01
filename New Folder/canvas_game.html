@@ -4,30 +4,44 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <style>
 canvas {
-    border:1px solid #d3d3d3;
-    background-color: blue;
+     background-color: #fff;
+     -webkit-animation: random 5s infinite;
+     animation: random 5s infinite;
+}
+@keyframes  random {
+    25% { background-color: red; } 
+    30% { background-color: yellow; } 
+    45% { background-color: green; } 
+    60% { background-color: blue; }
+    50% { background-color: orange; }  
 }
 h2 {
     font-family: "courier new";
 }
+myGamePiece {
+    color: #00e6e6;
+}
 </style>
 </head>
 <body onload="startGame()">
-    <center><h2>USE YOUR MOUSE TO CONTROL THE YELLOW DUDE</h2></center>
+    <center><h2>USE YOUR MOUSE TO CONTROL THE AQUA DUDE</h2></center>
 <center><script>
 
 var myGamePiece;
 
 function startGame() {
-    myGamePiece = new component(40, 40, "yellow", 0, 120);
+    myGamePiece = new component(10, 10, "aqua",0, 120);
+    
     myGameArea.start();
 }
-
+function click() {
+    document.getElementById("myCanvas").style.color = "getRandomColor()";
+}
 var myGameArea = {
     canvas : document.createElement("canvas"),
     start : function() {
-        this.canvas.width = 480;
-        this.canvas.height = 270;
+        this.canvas.width = 800;
+        this.canvas.height = 600;
         this.canvas.style.cursor = "none";
         this.context = this.canvas.getContext("2d");
         document.body.insertBefore(this.canvas, document.body.childNodes[0]);
@@ -39,9 +53,10 @@ var myGameArea = {
     }, 
 
     clear : function(){
-        this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
+        //this.context.clearRect(0, 0, this.canvas.width, this.canvas.height);
     }
 }
+
 function component(width, height, color, x, y) {
     this.width = width;
     this.height = height;
@@ -53,7 +68,9 @@ function component(width, height, color, x, y) {
         ctx = myGameArea.context;
         ctx.fillStyle = color;
         ctx.fillRect(this.x, this.y, this.width, this.height);
-    }
+        var c = document.getElementById("myCanvas");
+var ctx = c.getContext("2d");
+    };
 }
 
 function updateGameArea() {
