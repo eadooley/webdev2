@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html>
+<title>Tamales</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<style>
+body {font-family: "Times New Roman", Georgia, Serif;}
+h1,h2,h3,h4,h5,h6 {
+    font-family: "Playfair Display";
+    letter-spacing: 0px;
+}
+hr { 
+    display: block;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    margin-left: auto;
+    margin-right: auto;
+    border-style: inset;
+    border-width: 1px;
+} 
+    .navbar {
+      margin-bottom: 50px;
+      border-radius: 0;
+    }
+    
+    /* Remove the jumbotron's default bottom margin */ 
+     .jumbotron {
+      margin-bottom: 0;
+    }
+   
+    /* Add a gray background color and some padding to the footer */
+    footer {
+      background-color: #f2f2f2;
+      padding: 25px;
+    }
+</style>
+<body>
+
+<div class="jumbotron" style="background-color:skyblue" >
+  <div class="container text-center">
+    <h1>Tamales</h1>      
+    <p></p>
+  </div>
+</div>
+
+<nav class="navbar navbar-inverse">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>                        
+      </button>
+    </div>
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav">
+        <li class="active" ><a href="HomePage.html">Home</a></li>
+ <li><a href="https://preview.c9users.io/edooley/webdev1718aboutme/GroupApp/Breakfast.html?_c9_id=livepreview3&_c9_host=https://ide.c9.io">Breakfast</a></li>
+        <li><a href="Appetizers.html">Appetizers</a></li>
+        
+        <li><a href="entrees.html">Entrees</a></li>
+        <li><a href="desserts.html">Deserts</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+<!-- Header -->
+<header class="w3-display-container w3-content w3-wide" style="max-width:1600px;min-width:500px" id="home">
+  <img class="w3-image" src="/w3images/hamburger.jpg" alt="Hamburger Catering" width="1600" height="800">
+  <div class="w3-display-bottomleft w3-padding-large w3-opacity">
+    <h1 class="w3-xxlarge"></h1>
+  </div>
+</header>
+
+<!-- Page content -->
+<div class="w3-content" style="max-width:1100px">
+
+  <!-- About Section -->
+  <div class="w3-row w3-padding-64" id="about">
+    <div class="w3-col m6 w3-padding-large w3-hide-small">
+      
+      
+      
+      
+      
+      
+      
+<center><img src="data:image/jpeg;base64,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"></center>
+
+
+
+    </div>
+
+
+    <div class="w3-col m6 w3-padding-large">
+      
+      <h1 class="w3-center">Tamales</h1><br>
+      <h5 class="w3-center">Video</h5>
+      <p class="w3-large"> </p>
+      <p class="w3-large w3-text-grey w3-hide-medium"></p>
+      <iframe width="420" height="345" src="https://www.youtube.com/watch?v=jLAwKiCNOdI">
+</iframe>
+    </div>
+  </div>
+  
+  <hr   >
+  
+  
+  <div class="w3-row w3-padding-64" id="ingredients">
+    <div class="w3-col l6 w3-padding-large">
+      <h1 class="w3-center">Ingredients</h1><br>
+     <ol>
+            <li>3 1⁄2 lbs pork shoulder or 3 1⁄2 lbs pork butt, trimmed of fat and cut up</li>
+            <li>10 cups water</li>
+            <li>1 medium onion, quartered</li>
+            <li>3 garlic cloves, minced</li>
+           <li>3 1⁄2 teaspoons salt</li>
+           <li>4 cups red chili sauce (see Red Chili Sauce (To Be Used With Traditional Tamales) for red chili sauce)</li>
+           <li>3⁄4 cup shortening</li>
+           <li>6 cups masa harina</li>
+           <li>1 1⁄2 teaspoons baking powder</li>
+           <li>50 dried corn husks (about 8 inches long)</li>
+        </ol>
+    </div>
+    
+    <div class="w3-col l6 w3-padding-large">
+    </div>
+  </div>
+
+  <hr>
+
+ 
+  
+
+</div>
+
+
+
+
+</body>
+</html>
